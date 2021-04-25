@@ -58,6 +58,7 @@ void DrawDino(int dinoY)
 	printf("     $$$$$$     \n");
 	if (legFlag)
 	{
+		//귀엽게 달릴때 발 방향 바뀌는거 표현 ㅋㅋㅋㅋㅋㅋ
 		printf("     $    $$$    \n");
 		printf("     $$          ");
 		legFlag = false;
@@ -135,7 +136,8 @@ int main(void)
 		{
 			if (isCollision(treeX, dinoY))
 				break;
-			if (GetKeyDown() == 'z' && isBottom)
+			//spacebar눌렀을때 점프!
+			if (GetKeyDown() == ' ' && isBottom)
 			{
 				isStart = true;
 				isBottom = false;
